@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/oreby/static/css/main.38020647.css",
+    "main.js": "/oreby/static/js/main.40913499.js",
+    "static/media/bn.png": "/oreby/static/media/bn.4c130fd41e7c92e6ce5b.png",
+    "static/media/s_3.png": "/oreby/static/media/s_3.022b101f3f274fb19138.png",
+    "static/media/img_3.png": "/oreby/static/media/img_3.0ab5019b08b2bdb4f090.png",
+    "static/media/head_2.jpg": "/oreby/static/media/head_2.5dbb6ad0d8af493484fc.jpg",
+    "static/media/s_1.png": "/oreby/static/media/s_1.f8fef56c62ea430bd497.png",
+    "static/media/lorem_ipsum.jpg": "/oreby/static/media/lorem_ipsum.24b88a4791c6d69fec59.jpg",
+    "static/media/im_3.png": "/oreby/static/media/im_3.51bfe0fd67b3ef0595ed.png",
+    "static/media/phn.png": "/oreby/static/media/phn.4f42f08ed7f07ea5298d.png",
+    "static/media/img_4.png": "/oreby/static/media/img_4.b64351b5b356812fc722.png",
+    "static/media/im_4.png": "/oreby/static/media/im_4.aeb42dc8935fe27f6e15.png",
+    "static/media/s_2.png": "/oreby/static/media/s_2.3371268bd98a22747faa.png",
+    "static/media/im_2.png": "/oreby/static/media/im_2.51d0b66f6ba0bb6078f1.png",
+    "static/media/im_1.png": "/oreby/static/media/im_1.6aee12d2b7b95e4c9900.png",
+    "static/media/im_7.png": "/oreby/static/media/im_7.b7c0d997484ae7c4fa33.png",
+    "static/media/im_5.png": "/oreby/static/media/im_5.125a4871d790bf669512.png",
+    "static/media/im_8.png": "/oreby/static/media/im_8.7ad3c161d38fef8ad2a9.png",
+    "static/media/im_6.png": "/oreby/static/media/im_6.31eaf0c32ac0445fab03.png",
+    "static/media/head.jpg": "/oreby/static/media/head.aeb028faa022c7561418.jpg",
+    "static/media/Image.png": "/oreby/static/media/Image.9ab062866f5a4b325d41.png",
+    "static/media/img_2.png": "/oreby/static/media/img_2.ef278d0a0bfdec20b5b6.png",
+    "index.html": "/oreby/index.html",
+    "main.38020647.css.map": "/oreby/static/css/main.38020647.css.map",
+    "main.40913499.js.map": "/oreby/static/js/main.40913499.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38020647.css",
+    "static/js/main.40913499.js"
+  ]
+}
