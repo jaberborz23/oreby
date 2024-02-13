@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
     
-  
+   <Header/>
     <Navbar/>
     <Banner/>
     <Sale/>
@@ -21,6 +21,7 @@ const Home = () => {
     <Basic/>
     <Phone/>
    <Special/>
+   <Footer/>
   
     
     
