@@ -61,7 +61,7 @@ const Basic = () => {
 
             </div>
 
-            <div className=" flex lg:justify-between justify-start gap-x-2 items-center pt-3">
+            <div className=" flex justify-between  gap-x-2 items-center pt-3">
               
               <h3 className='  font-dm text-[20px] font-bold text-bl leading-[26.04px] '   >Basic Crew Neck Tee</h3>
               <p className='  font-dm text-[16px] font-normal text-gr leading-[30px]'   >$44.00 </p>
@@ -112,7 +112,7 @@ const Basic = () => {
 
             </div>
 
-            <div className=" flex lg:justify-between justify-start gap-x-2 items-center pt-3">
+            <div className=" flex justify-between  gap-x-2 items-center pt-3">
               
               <h3 className='  font-dm text-[20px] font-bold text-bl leading-[26.04px] '   >Basic Crew Neck Tee </h3>
               <p className='  font-dm text-[16px] font-normal text-gr leading-[30px]'   >$44.00 </p>
@@ -162,7 +162,7 @@ const Basic = () => {
 
 </div>
 
-<div className=" flex lg:justify-between justify-start gap-x-2 items-center pt-3">
+<div className=" flex justify-between  gap-x-2 items-center pt-3">
   
   <h3 className='  font-dm text-[20px] font-bold text-bl leading-[26.04px] '   >Basic Crew Neck Tee</h3>
   <p className='  font-dm text-[16px] font-normal text-gr leading-[30px]'   >$44.00 </p>
@@ -212,7 +212,7 @@ const Basic = () => {
 
 </div>
 
-<div className=" flex lg:justify-between justify-start gap-x-2 items-center pt-3">
+<div className=" flex justify-between  gap-x-2 items-center pt-3">
   
   <h3 className='  font-dm text-[20px] font-bold text-bl leading-[26.04px] '   >Basic Crew Neck Tee</h3>
   <p className='  font-dm text-[16px] font-normal text-gr leading-[30px]'   >$44.00 </p>

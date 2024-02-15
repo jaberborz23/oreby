@@ -4,7 +4,7 @@ import Flex from './Flex'
 import { TiSocialFacebook } from "react-icons/ti";
 import { FaLinkedinIn } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
-import logo from "../Assets/logo.png"
+import logo1 from "../Assets/logo1.png"
 
 const Footer = () => {
   return (
@@ -137,7 +137,7 @@ company@domain.com</p>
          
          <div className=" ml-[20px]">
 
-        <img src={logo} alt="logo" />
+        <img src={logo1} alt="logo1" />
 
 
 
