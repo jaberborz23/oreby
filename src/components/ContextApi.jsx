@@ -17,7 +17,7 @@ const ContextApi = ({children}) => {
 
 
      },[])
-     console.log(info);
+  
   return (
     <>
 
