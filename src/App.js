@@ -13,6 +13,7 @@ import About from "./pages/About.jsx";
 import Error from "./pages/Error.jsx";
 import Product from "./pages/Product.jsx";
 import ProductDetails from "./pages/ProductDetails.jsx";
+import Cart from "./pages/Cart.jsx";
 
 
 let rou = createBrowserRouter(createRoutesFromElements(
@@ -20,6 +21,7 @@ let rou = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<Home/>}></Route>
     <Route path="/about" element={<About/>}></Route>
     <Route path="/shop" element={<Product/>}></Route>
+    <Route path="/contacts" element={<Cart/>}></Route>
     <Route path="/shop/:id" element={<ProductDetails/>}></Route>
     <Route path="*" element={<Error/>}></Route>
     

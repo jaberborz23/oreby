@@ -32,7 +32,7 @@ const Header = () => {
      <li className=' font-dm font-bold text-[14px] leading-[18.23px] text-bl py-2 cursor-pointer '> <Link to="/" >  Home </Link>   </li> 
    <li className=' font-dm font-[400] text-[14px] leading-[18.23px] text-gr  py-2  cursor-pointer  '> <Link to="/shop" >  Shop </Link>    </li>  
      <li className=' font-dm font-[400] text-[14px] leading-[18.23px] text-gr  py-2   cursor-pointer   '> <Link to="/about">  About  </Link>     </li> 
-      <li className=' font-dm font-[400] text-[14px] leading-[18.23px] text-gr  py-2  cursor-pointer  '>Contacts</li>
+      <li className=' font-dm font-[400] text-[14px] leading-[18.23px] text-gr  py-2  cursor-pointer  '> <Link to="/contacts" > Contacts   </Link>    </li>
       <li className=' font-dm font-[400] text-[14px] leading-[18.23px] text-gr  py-2  cursor-pointer ' > Journal</li>
       
     </ul>
