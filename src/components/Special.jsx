@@ -158,7 +158,7 @@ const Special = () => {
 
 </div>
 
-<a href="#"  className='bg-bl absolute left-[56px] top-[30px]  font-dm font-bold text-[14px] text-[#FFFFFF] leading-[18.23px] border-2 border-white-600 px-4 py-2 '       > New</a>
+<a   className='bg-bl absolute left-[56px] top-[30px]  font-dm font-bold text-[14px] text-[#FFFFFF] leading-[18.23px] border-2 border-white-600 px-4 py-2 ' > New</a>
 
 </div>
 
