@@ -5,25 +5,14 @@ import im_1 from "../Assets/im_1.png"
 import im_2 from "../Assets/im_2.png"
 import im_3 from "../Assets/im_3.png"
 import im_4 from "../Assets/im_4.png"
-
 import { FaHeart,FaShoppingCart } from "react-icons/fa";
 import { IoIosGitCompare } from "react-icons/io";
 
-
-
-
-
-
-
 const Basic = () => {
-
-
 
   return (
     <div className='py-10'>
-
     <Container>
-
       <h2 className=' lg:px-[45px] font-dm text-[39px] font-bold text-bl leading-[50.78px] '     >New Arrivals</h2>
 
       <Flex className='lg:gap-x-2 xl:gap-x-4'> 

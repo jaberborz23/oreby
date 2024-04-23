@@ -74,20 +74,9 @@ const Banner = () => {
 <div className="">
 
 <img src={vec_2} alt="bn" className='w-full lg:h-[600px] h-[250px]  ' />
-
-
 </div>
-
-
-
-
-
   </Slider>
   </>
-
-
-
-
     </div>
   )
 }

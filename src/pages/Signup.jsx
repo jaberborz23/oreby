@@ -1,25 +1,70 @@
 import React, { useState } from 'react'
 import Container from '../components/Container'
 import { Link } from 'react-router-dom'
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getDatabase, ref, set,push } from "firebase/database";
+import { useNavigate } from 'react-router-dom';
+import { FaRegEye,FaRegEyeSlash  } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Signup = () => {
-  let [fullName , setfullName] = useState("")
-  let [email , setEmail] = useState("")
-  let [password , setPassword] = useState("")
+
+
+  let [fullName , setfullName] = useState("");
+  let [email , setEmail] = useState("");
+  let [password , setPassword] = useState("");
+  let [err , setErr] = useState("");
+  let [show , setShow] = useState(false)
+  const auth = getAuth();
+  const db = getDatabase();
+  let navigate = useNavigate()
   let handleFullname = (e)=>{
     setfullName(e.target.value);
 
   }
   let handleEmail = (e)=>{
     setEmail(e.target.value)
+    setErr("")
   }
   let handlepassword = (e)=>{
   setPassword(e.target.value)
   }
-  let handleSubmit = (e)=>{
-    e.preventDefault();
-    console.log("ami");
-  }
+  let handleSubmit = ()=>{
+    if(!email){
+      setErr("Please fill the email");
+    }else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+      setErr("Enter Your Valid Email")
+    }
+  
+  
+  
+    createUserWithEmailAndPassword(auth, email, password)
+  .then((user) => {
+    set(ref(db, 'users/'+ user.user.uid), {
+      username: fullName,
+      email: email,
+    });
+  }).then( ()=>{
+    
+      toast('🦄 Wow so easy!')
+  
+    
+  }).then(()=>{
+   setTimeout(()=>{
+    navigate("/login")
+   },2000)
+  })
+
+  
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
+}
+  
+    
+  
   return (
     <div className='py-[48px]'>
       <Container>
@@ -43,9 +88,12 @@ const Signup = () => {
       </div>
       <div className="pt-[47px]">
       <div className="flex items-center justify-start flex-wrap pt-[42px] gap-x-8">
-        <div className=""> 
+        <div className="relative"> 
          <h3 className='font-dm text-[16px] font-bold text-bl leading-[23px] '  >Email address</h3>
          <input type="text"  class=" lg:w-[100%] w-auto border-1 border-[#FFFFFF]  outline-1    py-2 px-[67px]  "  maxlength="300" name="inputData"   placeholder='company@domain.com' onChange={handleEmail}   ></input> 
+         <div className="absolute top-[32px] left-[114px] text-red-500">
+         <p>{err}</p>
+         </div>
          </div>
         <div className = "" >
         <h3 className='font-dm text-[16px] font-bold text-bl leading-[23px] '  >Telephone</h3>
@@ -112,16 +160,18 @@ const Signup = () => {
         <div className=" py-[56px]">
         <h2 className='font-dm text-[39px] font-bold text-bl leading-[50.78px] '>Your Password</h2>
       <div className="flex items-center justify-start flex-wrap pt-[42px] gap-x-8">
-        <div className=""> 
+        <div className=" relative"> 
          <h3 className='font-dm text-[16px] font-bold text-bl leading-[23px] '  >Password</h3>
-         <input type="text"  class=" lg:w-[100%] w-auto border-1 border-[#FFFFFF]  outline-1    py-2 px-[67px]  "  maxlength="300" name="inputData" onChange={handlepassword}   placeholder='Password'></input> 
+         <input type={show ? "text" : "password"}  class=" lg:w-[100%] w-auto border-1 border-[#FFFFFF]  outline-1    py-2 px-[67px]  "  maxlength="300" name="inputData" onChange={handlepassword}   placeholder='Password'></input> 
+         <div onClick={()=>setShow(!show)} className=" absolute top-[65%] translate-y-[-50%] right-3">
+          {show ?  <FaRegEye />:<FaRegEyeSlash />}
+           
+
+         </div>
          </div>
         <div className=" ">
         <h3 className='font-dm text-[16px] font-bold text-bl leading-[23px] '  >Repeat Password</h3>
         <input type="password"  class=" lg:w-[100%] w-auto border-1 border-[#FFFFFF]  outline-1    py-2 px-[67px]  "  maxlength="300" name="inputData"   placeholder='Repeat password'></input> 
-      
-
-
         </div>
       </div>
       </div>
@@ -140,6 +190,19 @@ const Signup = () => {
       </div>
       <div className='pt-[29px]' onClick={handleSubmit} >
       <h3 class="py-[16px] px-[77px] bg-bl font-dm text-[16px] text-[#FFFFFF] border-[1px] border-[#2B2B2B] inline-block cursor-pointer font-bold hover:bg-white hover:text-bl  ">Signin</h3>
+      <ToastContainer 
+      position="top-center"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="light"
+     
+      />
       </div>
       <div className=" mt-5">
       <span className='font-dm text-[15px] font-normal text-gr leading-[18.23px] pb-9'> Already have account ? Please <Link to="/login"> Login</Link></span>

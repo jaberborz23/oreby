@@ -72,20 +72,22 @@ const Cart = () => {
           
            
         </div>
-        <div className="w-full flex justify-end py-[64px]">
+        <div className="w-full flex lg:justify-end justify-start py-[64px]">
             <div className="w-[40%] relative ">
-                <h5 className='absolute left-[178px] top-[-34px] font-dm font-bold text-[20px] leading-[26.04px] text-bl'>Cart totals</h5>
+                <h5 className='absolute lg:left-[178px] left-[20px] lg:top-[-34px] top-[-20px] font-dm font-bold lg:text-[20px]  leading-[26.04px] text-bl'>Cart totals</h5>
                 <div className="w-[40%] ">
                 <div className=" flex  items-center ">
-                    <h6 className='border-[1px] border-[#F0F0F0] p-3 font-dm font-bold text-[16px] leading-[23px] text-bl'>Subtotal</h6>
-                    <p className='border-[1px] border-[#F0F0F0] p-3 font-dm font-normal text-[16px] leading-[30px] text-gr'> {totalPrice} $ </p>
+                    <h6 className='border-[1px] border-[#F0F0F0] p-3 font-dm font-bold text-[16px] leading-[23px] text-bl'>Quantity</h6>
+                    <p className='border-[1px] border-[#F0F0F0] p-3 font-dm font-normal lg:text-[16px]  leading-[30px] text-gr'> {totalQuantity}  </p>
+                    <span className='font-dm font-bold text-[16px] leading-[30px] text-gr'> $</span>
                 </div>
                 <div className=" flex  items-center ">
                     <h6 className='border-[1px] border-[#F0F0F0] p-3 font-dm font-bold text-[16px] leading-[23px] text-bl'>Total</h6>
-                    <p className='border-[1px] border-[#F0F0F0] p-3 font-dm font-normal text-[16px] leading-[30px] text-gr'>{totalPrice} $</p>
+                    <p className='border-[1px] border-[#F0F0F0] p-3 font-dm font-normal text-[16px] leading-[30px] text-gr'>{totalPrice} </p>
+                    <span className='pr-2 font-dm font-bold text-[16px] leading-[30px] text-gr'> $</span>
                 </div>
                 <div className=" w-[200px] mt-5 h-[50px] bg-[#262626] flex items-center justify-center">
-                    <p className='text-center text-[#FFFFFF] font-dm font-bold text-[14px] leading-[18.23px]  '>Proceed to Checkout</p>
+                    <p className='text-center text-[#FFFFFF] font-dm font-bold text-[14px] leading-[18.23px]  ' > <Link to="/checkout"> Proceed to Checkout </Link></p>
                  </div>
                 
                 </div>

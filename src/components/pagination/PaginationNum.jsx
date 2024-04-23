@@ -9,6 +9,7 @@
 
 <nav aria-label="Page navigation example mx-auto">
   <ul class="flex items-center justify-center -space-x-px h-8 text-sm py-10  ">
+    { pageNumber.length > 0 && 
     <li onClick={previous}>
       <a  class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
         <span class="sr-only">Previous</span>
@@ -17,9 +18,10 @@
         </svg>
       </a>
     </li>
+ }
 
     {
-    pageNumber.map((item,i, pgnm)=>(
+    pageNumber.map((item,i)=>(
         <li key={i} onClick={()=>paginate(item)} className={ currentPage == i + 1 ? "flex items-center justify-center px-3 h-8 leading-tight text-[white] bg-[#a8a695] border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white cursor-pointer " : "flex items-center justify-center px-3 h-8 leading-tight text-[#222] bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white cursor-pointer " }>
         <a>{item + 1 }</a>
   
@@ -29,7 +31,7 @@
 
 
     ))}
-  
+  { pageNumber.length > 0 && 
     <li onClick={next}>
       <a  class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
         <span class="sr-only">Next</span>
@@ -38,6 +40,7 @@
         </svg>
       </a>
     </li>
+ }
   </ul>
 </nav>
 

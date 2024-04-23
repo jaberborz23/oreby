@@ -16,6 +16,11 @@ import ProductDetails from "./pages/ProductDetails.jsx";
 import Cart from "./pages/Cart.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
+import Checkout from "./pages/Checkout.jsx";
+import Myaccount from "./pages/Myaccount.jsx";
+import Contact from "./pages/Contact.jsx";
+import SearchFilterPage from "./pages/SearchFilterPage.jsx";
+import Chkout from "./pages/Chkout.jsx";
 
 
 let rou = createBrowserRouter(createRoutesFromElements(
@@ -27,6 +32,11 @@ let rou = createBrowserRouter(createRoutesFromElements(
     <Route path="/login" element={<Login/>}></Route>
     <Route path="/signup" element={<Signup/>}></Route>
     <Route path="/shop/:id" element={<ProductDetails/>}></Route>
+    <Route path="/checkout" element={<Checkout/>}></Route>
+    <Route path="/myaccount" element={<Myaccount/>}></Route>
+    <Route path="/contacts" element={<Contact/>}></Route>
+    <Route path="/search" element={<SearchFilterPage/>}></Route>
+    <Route path="/chk" element={<Chkout/>}></Route>
     <Route path="*" element={<Error/>}></Route>
     
   </Route>
