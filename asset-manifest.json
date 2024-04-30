@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/oreby/static/css/main.7a795ed3.css",
-    "main.js": "/oreby/static/js/main.99bfe5c3.js",
+    "main.css": "/oreby/static/css/main.3c6da972.css",
+    "main.js": "/oreby/static/js/main.417a5a97.js",
     "static/media/ab_im2.png": "/oreby/static/media/ab_im2.dc2804dddbef41d79619.png",
     "static/media/bn.png": "/oreby/static/media/bn.4c130fd41e7c92e6ce5b.png",
     "static/media/s_3.png": "/oreby/static/media/s_3.022b101f3f274fb19138.png",
@@ -24,11 +24,11 @@
     "static/media/Image.png": "/oreby/static/media/Image.9ab062866f5a4b325d41.png",
     "static/media/img_2.png": "/oreby/static/media/img_2.ef278d0a0bfdec20b5b6.png",
     "index.html": "/oreby/index.html",
-    "main.7a795ed3.css.map": "/oreby/static/css/main.7a795ed3.css.map",
-    "main.99bfe5c3.js.map": "/oreby/static/js/main.99bfe5c3.js.map"
+    "main.3c6da972.css.map": "/oreby/static/css/main.3c6da972.css.map",
+    "main.417a5a97.js.map": "/oreby/static/js/main.417a5a97.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a795ed3.css",
-    "static/js/main.99bfe5c3.js"
+    "static/css/main.3c6da972.css",
+    "static/js/main.417a5a97.js"
   ]
 }
