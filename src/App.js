@@ -25,7 +25,7 @@ import Chkout from "./pages/Chkout.jsx";
 
 let rou = createBrowserRouter(createRoutesFromElements(
   <Route element={<Layout/>}>
-    <Route path="/" element={<Home/>}></Route>
+    <Route path="/oreby" element={<Home/>}></Route>
     <Route path="/about" element={<About/>}></Route>
     <Route path="/shop" element={<Product/>}></Route>
     <Route path="/cart" element={<Cart/>}></Route>

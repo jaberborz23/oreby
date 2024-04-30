@@ -189,7 +189,7 @@ const Signup = () => {
       
       </div>
       <div className='pt-[29px]' onClick={handleSubmit} >
-      <h3 class="py-[16px] px-[77px] bg-bl font-dm text-[16px] text-[#FFFFFF] border-[1px] border-[#2B2B2B] inline-block cursor-pointer font-bold hover:bg-white hover:text-bl  ">Signin</h3>
+      <h3 class="py-[16px] px-[77px] bg-bl font-dm text-[16px] text-[#FFFFFF] border-[1px] border-[#2B2B2B] inline-block cursor-pointer font-bold hover:bg-white hover:text-bl  "> <Link >Signin</Link></h3>
       <ToastContainer 
       position="top-center"
       autoClose={5000}

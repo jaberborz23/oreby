@@ -1,8 +1,66 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from '../components/Container'
 import { Link } from 'react-router-dom'
+import { getAuth, signInWithEmailAndPassword , sendPasswordResetEmail  } from "firebase/auth";
+
 
 const Login = () => {
+  const auth = getAuth();
+
+  let [email , setEmail] = useState('')
+  let [password , setPassword] = useState('')
+  let [error , setError] = useState('')
+  let [forgetModal , setforgetMlodal] = useState(false)
+  let [updatepasswordEmail , setupdatepasswordEmail] = useState('')
+  let handleEmail = (e)=>{
+    setEmail(e.target.value);
+
+  }
+  let handlePassword = (e)=>{
+    setPassword(e.target.value);
+
+
+  }
+  let handleLogin = (e)=>{
+ 
+    signInWithEmailAndPassword(auth, email, password)
+  .then((user) => {
+    console.log(user);
+    setError('')
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+   setError(errorCode);
+  });
+
+  }
+  let handleforgetPassword = ()=>{
+    setforgetMlodal(true)
+  //   sendPasswordResetEmail(auth, email)
+  // .then(() => {
+  //   // Password reset email sent!
+  //   // ..
+  // })
+  // .catch((error) => {
+  //   const errorCode = error.code;
+  //   const errorMessage = error.message;
+  //   // ..
+  // });
+  }
+  let handleUpdatePassword = ()=>{
+    sendPasswordResetEmail(auth, email)
+  .then(() => {
+   
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
+
+  }
+
+  
   return (
     <div className=''>
       <Container>
@@ -18,18 +76,24 @@ const Login = () => {
       <div className="flex items-center justify-start flex-wrap pt-[42px] gap-x-8">
         <div className=""> 
          <h3 className='font-dm text-[16px] font-bold text-bl leading-[23px] '  >Email address</h3>
-         <input type="text"  class=" lg:w-[100%] w-auto border-1 border-[#FFFFFF]  outline-1    py-2 px-[67px]  "  maxlength="300" name="inputData"   placeholder='company@domain.com'></input> 
+         <input type="email"  class=" lg:w-[100%] w-auto border-1 border-[#FFFFFF]  outline-1    py-2 px-[67px]  "  maxlength="300" name="inputData"   placeholder='company@domain.com' onChange={handleEmail}></input> 
          </div>
         <div className=" ">
         <h3 className='font-dm text-[16px] font-bold text-bl leading-[23px] '  >Password</h3>
-        <input type="password"  class=" lg:w-[100%] w-auto border-1 border-[#FFFFFF]  outline-1    py-2 px-[67px]  "  maxlength="300" name="inputData"   placeholder='password'></input> 
+        <input type="password"  class=" lg:w-[100%] w-auto border-1 border-[#FFFFFF]  outline-1    py-2 px-[67px]  "  maxlength="300" name="inputData"   placeholder='password' onChange={ handlePassword}></input> 
       
 
 
         </div>
       </div>
+      { error && 
+       <p className='text-red-500 mt-5 text-md font-medium'>{error}</p>
+      }
       <div className='pt-[29px]' >
-      <h3 class="py-[16px] px-[77px] bg-[#FFFFFF] font-dm text-[16px] text-bl border-[1px] border-[#2B2B2B] inline-block font-bold cursor-pointer">Login</h3>
+      <h3 class="py-[16px] px-[77px] bg-[#FFFFFF] font-dm text-[16px] text-bl border-[1px] border-[#2B2B2B] inline-block font-bold cursor-pointer"><Link  onClick={handleLogin} > Login</Link></h3>
+      </div>
+      <div className='pt-[29px]' >
+      <h3 class="py-[16px] px-[77px] bg-[#FFFFFF] font-dm text-[16px] text-bl border-[1px] border-[#2B2B2B] inline-block font-bold cursor-pointer"><Link onClick={handleforgetPassword}  > Forget Password</Link></h3>
       </div>
         </div>
         <div className="pt-[96px]">
@@ -39,6 +103,17 @@ const Login = () => {
       <h3 class="py-[16px] px-[66px] bg-bl font-dm text-[16px] text-[#FFFFFF] border-[1px] border-[#2B2B2B] inline-block cursor-pointer font-bold">   <Link to="/signup" > Continue </Link></h3>
       </div>
         </div>
+        { forgetModal &&
+        
+        <div className='absolute top-[430px] left-2/4 translate-x-[-50%] w-[500px] h-[300px] bg-gray-500 pt-[10px]'>
+       <input type="text" onChange={(e)=>setupdatepasswordEmail(e.target.value)} className='w-[80%] h-[50px] p-5'placeholder='Enter your Email' />
+       <div className='pt-[29px]' >
+      <h3 class="py-[16px] px-[66px] bg-bl font-dm text-[16px] text-[#FFFFFF] border-[1px] border-[#2B2B2B] inline-block cursor-pointer font-bold" onClick={handleUpdatePassword}>   <Link  > Update Password</Link></h3>
+      </div>
+
+        </div>
+        
+        }
 
  
       </Container>

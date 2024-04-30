@@ -8,7 +8,7 @@ const Contact = () => {
     <div>
       <Container>
       <h1 className='font-dm text-[49px] font-bold text-bl leading-[63.8px] '>Contacts</h1>
-      <span className=' font-dm text-[12px] font-normal text-grr leading-[15.62px] '> <Link to="/"> Home</Link> {'>'} <Link to="/contacts">Contacts</Link> </span>
+      <span className=' font-dm text-[12px] font-normal text-grr leading-[15.62px] '> <Link to="/oreby"> Home</Link> {'>'} <Link to="/contacts">Contacts</Link> </span>
       <div className=" pt-[57px]">
       <h2 className='font-dm text-[39px] font-bold text-bl leading-[50.78px] '>Your Personal Details</h2>
       <div className="flex items-center justify-start flex-wrap pt-[42px] gap-x-8">

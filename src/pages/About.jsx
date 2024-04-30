@@ -11,7 +11,7 @@ const About = () => {
     <div className='py-[89px]' >
       <Container>
       <h1 className='font-dm text-[49px] font-bold text-bl leading-[63.8px] '>About</h1>
-      <span className=' font-dm text-[12px] font-normal text-grr leading-[15.62px] '> <Link to="/"> Home</Link> {'>'} <Link to="/about">About</Link> </span>
+      <span className=' font-dm text-[12px] font-normal text-grr leading-[15.62px] '> <Link to="/oreby"> Home</Link> {'>'} <Link to="/about">About</Link> </span>
       <div className="  flex items-center flex-wrap justify-between w-full ">
          <div className="lg:w-1/2 w-full sm:w-1/2 relative">
           <img src={ab_im} alt="ab_im" className='w-full' />
